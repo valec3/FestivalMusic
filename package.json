@@ -1,0 +1,22 @@
+{
+  "name": "festival_musica",
+  "version": "1.0.0",
+  "description": "Aprendiendo SASS y Gulp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "SASS",
+    "Gulp",
+    "Web",
+    "Design"
+  ],
+  "author": "Valec3",
+  "license": "ISC",
+  "devDependencies": {
+    "dart-sass": "^1.25.0",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0"
+  }
+}
