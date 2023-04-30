@@ -4,6 +4,11 @@ const imagemin = require('gulp-imagemin')
 const notify = require("gulp-notify");
 const webp = require("gulp-webp");
 
+const paths={
+    imagenes:'src/img/**/*',
+    scss:"src/scss/**/*.scss"
+}
+
 // Funcion que compila SASS
 function compilarSASS(){
     return src("src/scss/app.scss")
@@ -13,6 +18,8 @@ function compilarSASS(){
         }) )
         .pipe( dest("./build/css") )    
 }
+
+// Funcion para quitar espacios y saltos
 function minificarCSS(){
     return src("src/scss/app.scss")
         .pipe( sass({
@@ -20,13 +27,14 @@ function minificarCSS(){
         }) )
         .pipe( dest("./build/css") )    
 }
-
+// Funcion para minificar img
 function images(){
     return src("src/img/**/*")
         .pipe(imagemin())
         .pipe(dest("./build/img"))
 }
 
+// Funcion para convertir a webp
 function verWebp(){
     return src("src/img/**/*")
         .pipe(webp())
