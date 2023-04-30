@@ -1,0 +1,23 @@
+@mixin telefono{
+    @media(min-width:480px){
+        @content; //Para pasar multiples propiedades
+    }
+}
+
+@mixin tablet{
+    @media(min-width:768px){
+        @content; //Para pasar multiples propiedades
+    }
+}
+
+@mixin desktop{
+    @media(min-width:1200px){
+        @content; //Para pasar multiples propiedades
+    }
+}
+
+@mixin grid($col,$esp){
+    display: grid;
+    grid-template-columns:repeat($col,1fr) ;
+    gap: $esp;
+}
