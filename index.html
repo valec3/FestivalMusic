@@ -13,9 +13,9 @@
         <div class="content-header container">
             <h1>Rock and EDM festival</h1>
             <nav class="navbar">
-                <a href="#" class="">Line Up</a>
-                <a href="#" class="">Galeria</a>
-                <a href="#" class="">Boletos</a>
+                <a href="#lineup" class="">Line Up</a>
+                <a href="#galeria" class="">Galeria</a>
+                <a href="#boletos" class="">Boletos</a>
             </nav>
         </div>
     </header>
@@ -45,7 +45,7 @@
             <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum odio porro vero molestiae iusto sed itaque nihil tempore obcaecati nulla, mollitia explicabo debitis libero dolor. Dolores impedit debitis sit possimus.</p>
         </div>
     </div>
-    <section class="lineup">
+    <section id="lineup" class="lineup">
         <h3>LineUp</h3>
         <p class="day">Viernes 21</p>
         <div class="escenarios-contenedor container">
@@ -102,5 +102,71 @@
         </div>
 
     </section>
+    
+    <section id="galeria" class="galeria">
+        <h3>Galeria</h3>
+        <ul class="galeria__imgs"></ul>
+    </section>
+    <section id="boletos" class="boletos bg-green">
+        <h3>Boletos</h3>
+        <div class="contenedor__boletos container">
+            <div class="basico">
+                <p>Pase 1 dia</p>
+                <table class="pase">
+                    <thead>
+                        <tr>
+                            <th>Incluye</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Acceso a todos los escenarios</td>
+                        </tr>
+                        <tr>
+                            <td>Comida y bebida</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>$100</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="premium">
+                <p>Pase 2 dias</p>
+                <table class="pase">
+                    <thead>
+                        <tr>
+                            <th>Incluye</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Acceso a todos los escenarios</td>
+                        </tr>
+                        <tr>
+                            <td>Comida y bebida</td>
+                        </tr>
+                        <tr>
+                            <td>Camisa del evento</td>
+                        </tr>
+                        <tr>
+                            <td>Acceso VIP</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>$200</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <p>Rock and EDM festival. TODOS LOS DERECHOS RESERVADOS</p>
+    </footer>
+    <script src="build/js/bundle.js"></script>
 </body>
 </html>

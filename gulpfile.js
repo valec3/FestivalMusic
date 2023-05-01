@@ -3,10 +3,12 @@ const sass = require('gulp-sass')(require('dart-sass'));
 const imagemin = require('gulp-imagemin')
 const notify = require("gulp-notify");
 const webp = require("gulp-webp");
+const concat = require("gulp-concat");
 
 const paths={
     imagenes:'src/img/**/*',
-    scss:"src/scss/**/*.scss"
+    scss:"src/scss/**/*.scss",
+    js: "src/js/**/*.js"
 }
 
 // Funcion que compila SASS
@@ -27,6 +29,15 @@ function minificarCSS(){
         }) )
         .pipe( dest("./build/css") )    
 }
+
+// Funcion JS
+function javaScript(){
+    return src(paths.js)
+    .pipe( concat("bundle.js") )
+    .pipe( dest ("./build/js"))
+}
+
+
 // Funcion para minificar img
 function images(){
     return src("src/img/**/*")
@@ -44,12 +55,14 @@ function verWebp(){
 
 function watchFiles(){
     watch("src/scss/**/*.scss",compilarSASS);
+    watch(paths.js,javaScript)
 }
 
 
 
 exports.compilarSASS=compilarSASS;
 exports.minificarCSS=minificarCSS;
+exports.javaScript=javaScript;
 exports.images=images;
 exports.watchFiles=watchFiles;
 exports.verWebp=verWebp;

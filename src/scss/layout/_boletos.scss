@@ -1,0 +1,50 @@
+.boletos{
+    padding: $separacion 0;
+    color: $white;
+    text-align: center;
+    .contenedor__boletos{
+        margin-top: $separacion/2;
+        @include grid(2,$separacion)
+    }
+    .contenedor__boletos p{
+        font-size: 2.3rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+}
+
+.pase{
+    width: 100%;
+    color: #000;
+    border-spacing: 0;
+    thead{
+        background: $pink;
+        th{
+            padding: 1.2rem;
+            color: $white;
+            text-transform: uppercase;
+            font-weight: $thin;
+            font-size: 2rem;
+        }
+    }
+    tbody{
+        background: $white;
+        td{
+            padding: $separacion/4;
+            border-bottom: 2px solid #e1e1e1;
+        }
+        tr{
+            &:last-of-type td{
+                border: none;
+            }
+        }
+    }
+    tfoot{
+        background: $purple;
+        td{
+            padding: $separacion/3.7;
+            font-size: 3rem;
+            color: $white;
+        }
+    }
+}
